@@ -95,3 +95,11 @@
   :hook (org-mode . org-fancy-priorities-mode)
   :config
   (setq org-fancy-priorities-list '("HIGH" "MED" "LOW"))) ;; Nothing too fancy
+
+;; Global keymaps
+(map! :leader :desc "Open Notebook" "o c N" (lambda () (interactive) (find-file "~/org/notebook")))
+(map! :leader :desc "Open Notes" "o c n" (lambda () (interactive) (find-file "~/org/notebook/notes.org")))
+(map! :leader :desc "Open Ideas" "o c i" (lambda () (interactive) (find-file "~/org/notebook/ideas.org")))
+(map! :leader :desc "Open Projects" "o c P" (lambda () (interactive) (find-file "~/org/planner/projects.org")))
+(map! :leader :desc "Open Inbox" "o c i" (lambda () (interactive) (find-file "~/org/planner/inbox.org")))
+(map! :leader :desc "Open Planner" "o c p" (lambda () (interactive) (find-file "~/org/planner")))
